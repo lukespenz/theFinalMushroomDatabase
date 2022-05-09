@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+@keyframes psychedelic {
+    0% {
+        -webkit-filter: hue-rotate(0deg) saturate(2) invert(0);
+    }
+
+    50% {
+        -webkit-filter: hue-rotate(360deg) saturate(8) invert(.25);
+    }
+
+    100% {
+        -webkit-filter: hue-rotate(0deg) saturate(2) invert(0);
+    }
+}
+
+body {
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+#psychoactive {
+    -webkit-animation: psychedelic linear 10s infinite;
+    -moz-animation: psychedelic linear 10s infinite;
+    -o-animation: psychedelic linear 10s infinite;
+    animation: psychedelic linear 10s infinite;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+    border: 3px solid #555;
+}
+
+textarea {
+    height: 100px;
+    width: 200px;
+}
+
+.nav {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: rgb(85, 21, 85);
+    text-align: center;
+    transition: all 0.2s;
+}
+
+button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Create Mushrooms</title>
+</head>
+
+<body>
+    <div class="mushroom-form-container">
+        <!-- form for creating mushrooms -->
+        <form id="mushroom-form" action="submit">
+            <p>Photo: </p>
+            <input type="text" id="photo" required>
+
+            <p>Name: </p>
+            <input type="text" id="name" required>
+
+            <p>City, State, Country: </p>
+            <input type="text" id="location" required>
+
+            <p>Date: </p>
+            <input type="date" id="date" required>
+
+            <p>Documentor Name: </p>
+            <input type="text" id="who">
+
+            <p>Altitude: </p>
+            <input type="number" id="altitude">
+
+            <p>Habitat: </p>
+            <input type="text" id="habitat">
+
+            <!-- work on list formatting?? -->
+            <p>Substrate: </p>
+            <input type="text" id="substrate">
+
+            <p>Spore Print: </p>
+            <input type="text" id="spore_print">
+
+            <p>Edible: </p>
+            <input type="checkbox" id="edible">
+
+            <p>Psychoactive: </p>
+            <input type="checkbox" id="psychoactive">
+
+            <p>Notes: </p>
+            <textarea name="notes" form="mushroom-form" id="notes" onclick="clearTxt();">Enter text here...</textarea>
+            <script>
+
+            </script>
+
+            <br><br>
+
+            <input type="submit" id="add-mushroom-button" value="Add Mushroom">
+        </form>
+    </div>
+    <br>
+    <footer>
+        <button class="nav" id="viewMushrooms" onclick="navView()">View Mushrooms</button>
+        <button class="nav" id="createMushroom" onclick="navCreate()">Add Mushroom</button>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../javascript/createMushroom.js"></script>
+</body>
+
+</html>
