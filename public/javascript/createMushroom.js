@@ -51,7 +51,6 @@ class Mushroom {
 const captureForm = (e) => {
     e.preventDefault()
 
-    //not grabbing these values vv
     let photo = document.getElementById('photo').value
     let name = document.getElementById('name').value
     let location = document.getElementById('location').value

@@ -14,7 +14,6 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
     addMushroom: (req, res) => {
-        console.log(req.body)
         let { image_url, mushroom_name, location, date, who, altitude, habitat, substrate, spore_print, edible, psychoactive, notes } = req.body
         sequelize.query(`
         INSERT INTO mushrooms (image_url, mushroom_name, location, date, who, altitude, habitat, substrate, spore_print, edible, psychoactive, notes)
@@ -43,11 +42,24 @@ module.exports = {
     },
 
     getMushroom: (req, res) => {
+        console.log('mushroom hit')
         sequelize.query(`
         SELECT * FROM mushrooms
         `)
         .then((dbRes) => {
         res.status(200).send(dbRes[0])
         }).catch(err => console.log(err))
+    },
+
+    loginUser: (req, res) => {
+        let {username, password} = req.body
+        sequelize.query(`
+        SELECT * FROM users
+        WHERE username = '${username}'
+        AND password = '${password}'
+        `)
+        .then((dbRes) => {
+        res.status(200).send(dbRes[0])
+        }).catch(err => {console.log(`Couldn't find user: ${err}`)})
     }
 }

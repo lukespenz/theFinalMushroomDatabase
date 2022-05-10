@@ -10,61 +10,63 @@
 </head>
 
 <body>
+    <h1>Add Ye Mushrooms Hither</h1>
+    <header>
+        <button class="nav" id="viewMushrooms" onclick="navView()">View Mushrooms</button>
+        <button class="nav" id="createMushroom" onclick="navCreate()">Add Mushroom</button>
+    </header>
     <div class="mushroom-form-container">
         <!-- form for creating mushrooms -->
         <form id="mushroom-form" action="submit">
-            <p>Photo: </p>
-            <input type="text" id="photo" required>
+            <p>Photo URL</p>
+            <input type="text" id="photo" maxlength="2000" required>
 
-            <p>Name: </p>
-            <input type="text" id="name" required>
+            <p>Mushroom Species</p>
+            <input type="text" id="name" maxlength="400" required>
 
-            <p>City, State, Country: </p>
-            <input type="text" id="location" required>
+            <p>City, State, Country</p>
+            <input type="text" id="location" maxlength="400" required>
 
-            <p>Date: </p>
+            <p>Date Observed</p>
             <input type="date" id="date" required>
 
-            <p>Documentor Name: </p>
-            <input type="text" id="who">
+            <p>Documentor Name</p>
+            <input type="text" id="who" maxlength="40">
 
-            <p>Altitude: </p>
-            <input type="number" id="altitude">
+            <p>Altitude Found</p>
+            <input type="number" id="altitude" maxlength="40">
 
-            <p>Habitat: </p>
-            <input type="text" id="habitat">
+            <p>Habitat In</p>
+            <input type="text" id="habitat" maxlength="40">
 
-            <!-- work on list formatting?? -->
-            <p>Substrate: </p>
-            <input type="text" id="substrate">
+            <p>Substrate Grown</p>
+            <input type="text" id="substrate" maxlength="40">
 
-            <p>Spore Print: </p>
-            <input type="text" id="spore_print">
+            <p>Spore Print Color</p>
+            <input type="text" id="spore_print" maxlength="40">
 
-            <p>Edible: </p>
+            <p>Edible?</p>
             <input type="checkbox" id="edible">
 
-            <p>Psychoactive: </p>
+            <p>Psychoactive?</p>
             <input type="checkbox" id="psychoactive">
 
-            <p>Notes: </p>
-            <textarea name="notes" form="mushroom-form" id="notes" onclick="clearTxt();">Enter text here...</textarea>
+            <p>Notes</p>
+            <textarea name="notes" form="mushroom-form" id="notes" maxlength="2000"
+                onclick="clearTxt();">Enter text here...</textarea>
             <script>
 
             </script>
 
             <br><br>
 
-            <input type="submit" id="add-mushroom-button" value="Add Mushroom">
+            <input type="submit" id="submit-mushroom-button" value="Submit Mushroom">
         </form>
     </div>
-    <br>
-    <footer>
-        <button class="nav" id="viewMushrooms" onclick="navView()">View Mushrooms</button>
-        <button class="nav" id="createMushroom" onclick="navCreate()">Add Mushroom</button>
-    </footer>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../javascript/createMushroom.js"></script>
 </body>
 

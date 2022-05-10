@@ -12,10 +12,31 @@
 <body>
     <div class="main-container">
         <h1>Mushrooms</h1>
-        <a href="./views/createMushrooms.html">Create a Mushroom!</a>
-        <a href="./views/viewMushrooms.html">Current Mushroom entries</a>
+        <h1>Database</h1>
+        <h1>Log In</h1>
+
+        <form id='login'>
+            <div class="imgcontainer">
+                <img src="https://imgs.search.brave.com/X_tw9umoRxBzBPegKF1nkrKX0LgQ1FznSSZUqy9y69c/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9jZG4w/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvdGhhbmtzZ2l2/aW5nLWZpbGxlZC82/NC9UaGFua3NnaXZp/bmctMjAtNTEyLnBu/Zw"
+                    alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="username" required>
+                <br><br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="password" required>
+
+                <button type="submit" onclick="navView()">Login</button>
+            </div>
+        </form>
+
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascript/index.js"></script>
 </body>
 
 </html>

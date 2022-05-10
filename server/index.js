@@ -16,13 +16,15 @@ app.use(express.json());
 const {
     getMushroom,
     addMushroom,
-    deleteMushroom
+    deleteMushroom,
+    loginUser
 } = require('./controller')
 
 
 app.get("/api/public/views/viewMushrooms", getMushroom)
 app.post("/api/public/views/viewMushrooms", addMushroom)
 app.delete("/api/public/views/viewMushrooms/:id", deleteMushroom)
+app.post("/login", loginUser)
 
 //Pulls main app directory
 app.get('/', (req, res) => {res.sendFile(path.join(__dirname + '/../public/index.html'))})

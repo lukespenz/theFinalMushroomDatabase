@@ -10,7 +10,25 @@
 </head>
 
 <body>
-    <h1>Mushrooms!</h1>
+    <h1>The Mushrooms</h1>
+    <container id="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </container>
+    <header id="header" style="visibility: hidden">
+        <button class="nav" id="viewMushrooms" onclick="navView()">View Mushrooms</button>
+        <button class="nav" id="createMushroom" onclick="navCreate()">Add Mushroom</button>
+    </header>
     <div id="mushroom-container"></div> <!-- where mushroom objects will be inserted  -->
 
 
@@ -18,7 +36,9 @@
         <button class="nav" id="viewMushrooms" onclick="navView()">View Mushrooms</button>
         <button class="nav" id="createMushroom" onclick="navCreate()">Add Mushroom</button>
     </footer>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../javascript/viewMushrooms.js"></script>
 </body>
 
