@@ -1,8 +1,7 @@
+//translates server port and postgresSQL link to JSON so database and server can communicate
 require('dotenv').config()
 const Sequelize = require('sequelize')
-
 const {CONNECTION_STRING} = process.env
-
 const sequelize = new Sequelize(CONNECTION_STRING, {
     dialect: 'postgres',
     dialectOptions: {
@@ -12,7 +11,9 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
     }
 })
 
+//server functions
 module.exports = {
+    //adds mushroom info to postgresSQL database
     addMushroom: (req, res) => {
         let { image_url, mushroom_name, location, date, who, altitude, habitat, substrate, spore_print, edible, psychoactive, notes } = req.body
         sequelize.query(`
@@ -28,9 +29,10 @@ module.exports = {
             })
     },
     
+    //deletes mushroom from postgresSQL database
     deleteMushroom: (req, res) => {
         sequelize.query(`
-        delete from mushrooms where mushroom_id='${req.params.id}'
+        DELETE FROM mushrooms WHERE mushroom_id='${req.params.id}'
         `)
         .then(dbRes => {
             res.status(200).send(dbRes[0])
@@ -41,8 +43,8 @@ module.exports = {
         })
     },
 
+    //gets all mushrooms from postgresSQL database to create tables of
     getMushroom: (req, res) => {
-        console.log('mushroom hit')
         sequelize.query(`
         SELECT * FROM mushrooms
         `)
@@ -51,6 +53,7 @@ module.exports = {
         }).catch(err => console.log(err))
     },
 
+    //validates user's login information
     loginUser: (req, res) => {
         let {username, password} = req.body
         sequelize.query(`

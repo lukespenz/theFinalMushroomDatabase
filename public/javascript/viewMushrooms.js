@@ -1,11 +1,10 @@
-//hides second nav bar at beginning
-const header = document.getElementById('header')
+//input variables
+const mushroomContainer = document.querySelector('#mushroom-container') //element where mushroom cards will be placed
+const axiosRequest = `http://localhost:5555/api/public/views/viewMushrooms` //axios get & delete requests link
 
-const mushroomContainer = document.querySelector('#mushroom-container') //element where mushrooms will be placed
-const axiosRequest = `http://localhost:5555/api/public/views/viewMushrooms` //axios .get request link
-
-const deleteMushroom = (id) => axios.delete(`${axiosRequest}/${id}`).then(window.location.replace(`http://localhost:5555/views/viewMushrooms.html`)).catch(errCallback)
+//axios delete request: deletes mushroom card
 const errCallback = err => console.log(err)
+const deleteMushroom = (id) => axios.delete(`${axiosRequest}/${id}`).then(window.location.replace(`http://localhost:5555/views/viewMushrooms.html`)).catch(errCallback)
 
 //nav bar buttons & spinning icon
 const navCreate = () => {
@@ -35,7 +34,7 @@ const displayMushrooms = () => {
     })
 }
 
-//mushroom html insert
+//mushroom card html insert
 const createMushroomCard = (mushroom) => {
     const mushroomCard = document.createElement('div')
     mushroomCard.classList.add('mushroom-table')
@@ -79,13 +78,11 @@ const createMushroomCard = (mushroom) => {
         </table>
         <button id="delete-button" onclick="deleteMushroom(${mushroom.mushroom_id})">Delete</button>
         `
-        //<button id="delete-button" onclick="deleteMushroom(${mushroom.mushroom_id})" class="noselect"><span class='text'>Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></span></button>
-
         
     mushroomContainer.appendChild(mushroomCard) //adds mushroom card to mushroom table in viewMushrooms.html
-    spin()
-    header.style.visibility = 'visible'
+    spin() //removes loading star when elements received and load from database
+    header.style.visibility = 'visible' //adds top nav bar after loading star disappears
 }
 
 
-displayMushrooms();
+displayMushrooms(); //displays all mushroom data from postgresSQL database

@@ -4,16 +4,24 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
 h1 {
     font-family: Papyrus;
     font-size: 40pt;
 }
 
+/* decreases size of mushroom card pictures */
 img {
     width: 300px;
     height: 300px;
 }
 
+/* adds psychedelic filter for psychedelic mushrooms */
 @keyframes psychedelic {
     0% {
         -webkit-filter: hue-rotate(0deg) saturate(2) invert(0);
@@ -28,12 +36,6 @@ img {
     }
 }
 
-body {
-    background: #111;
-    color: #fff;
-    text-align: center;
-}
-
 #psychoactive {
     -webkit-animation: psychedelic linear 10s infinite;
     -moz-animation: psychedelic linear 10s infinite;
@@ -41,6 +43,7 @@ body {
     animation: psychedelic linear 10s infinite;
 }
 
+/* highlights textfields being used */
 input[type=text]:focus {
     background-color: lightblue;
     border: 3px solid #555;
@@ -51,6 +54,7 @@ textarea {
     width: 200px;
 }
 
+/* highlights notebox being used */
 textarea:focus {
     height: 100px;
     width: 200px;
@@ -58,6 +62,7 @@ textarea:focus {
     border: 3px solid #555;
 }
 
+/* nav bar to change webpages */
 .nav {
     display: inline-block;
     padding: 0.35em 1.2em;
@@ -80,6 +85,7 @@ button:hover {
     cursor: pointer;
 }
 
+/* loading icon on viewMushrooms page */
 #spinner {
     color: official;
     display: inline-block;
@@ -175,6 +181,7 @@ button:hover {
     }
 }
 
+/* submit button for createMushroom page */
 #submit-mushroom-button {
     background-color: green;
     display: inline-block;
@@ -198,16 +205,7 @@ button:hover {
     cursor: pointer;
 }
 
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
+/* delete button on viewMushrooms page */
 #delete-button {
     background-color: rgb(183, 38, 38);
     font-family: 'Lucida Console';

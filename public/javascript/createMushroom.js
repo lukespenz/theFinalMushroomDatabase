@@ -1,10 +1,10 @@
-//manipulated elements
+//input variables
 const mushroomForm = document.querySelector("#mushroom-form")
 const submitButton = document.querySelector('#add-mushroom-button')
 const navCreateMushroom = document.getElementById("#createMushroom")
 const navViewMushrooms = document.getElementById("#viewMushrooms")
 
-//nav bar buttons & clear notes placeholder text functions
+//nav bar buttons to change webpage
 const navCreate = () => {
 window.location.href='../views/createMushrooms.html'
 }
@@ -13,6 +13,7 @@ const navView = () => {
     window.location.href='../views/viewMushrooms.html'
 }
 
+//clears placeholder for textbox
 const clearTxt = () => {
     const textField = document.getElementById('notes')
     textField.value == 'Enter text here...' ?
@@ -23,11 +24,6 @@ const clearTxt = () => {
 //axios requests
 const axiosRequest = `http://localhost:5555/api/public/views/viewMushrooms`
 const errCallback = err => console.log(err)
-
-//
-function eraseText() {
-    document.getElementById("notes").value = "";
-}
 
 //creates mushroom objects
 class Mushroom {
@@ -47,7 +43,7 @@ class Mushroom {
     }
 } 
 
-//activates when add mushroom button pressed and inserts values into an object and adds to sequelize database
+//inserts values into an object and adds to sequelize database
 const captureForm = (e) => {
     e.preventDefault()
 
@@ -73,4 +69,5 @@ const captureForm = (e) => {
     }).catch(errCallback)
 }
 
-    mushroomForm.addEventListener('submit', captureForm)
+//submits mushroom information when button clicked
+mushroomForm.addEventListener('submit', captureForm)
