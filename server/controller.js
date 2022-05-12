@@ -62,7 +62,9 @@ module.exports = {
         AND password = '${password}'
         `)
         .then((dbRes) => {
-        res.status(200).send(dbRes[0])
-        }).catch(err => {console.log(`Couldn't find user: ${err}`)})
+        dbRes[0] == '' ?
+        res.status(200).send('user not found') :
+        res.status(200).send(dbRes[0]);
+        }).catch(console.log(`Couldn't find user`))
     }
 }

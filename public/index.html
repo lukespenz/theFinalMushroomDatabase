@@ -28,11 +28,21 @@
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" id="password" required>
 
-                <button type="submit" onclick="navView()">Login</button>
+                <button type="submit">Login</button>
             </div>
         </form>
-
     </div>
+    <br>
+    <container id="ellipsis" style="visibility: hidden">
+        <br>
+        <h2>Authorizing User</h2>
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </container>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
         integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
