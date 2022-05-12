@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <br>
     <h1>The Mushrooms</h1>
     <container id="spinner">
         <div></div>
@@ -26,16 +27,18 @@
         <div></div>
     </container>
     <header id="header" style="visibility: hidden">
-        <button class="nav" id="viewMushrooms" onclick="navView()">View Mushrooms</button>
+        <button class="nav" id="topViewMushrooms" onclick="navView()">View Mushrooms</button>
         <button class="nav" id="createMushroom" onclick="navCreate()">Add Mushroom</button>
     </header>
 
+    <h3 id='hide' style="visibility: visible">Loading Mushrooms</h3>
 
     <div id="mushroom-container"></div> <!-- where mushroom objects will be inserted  -->
 
+    <br>
 
     <footer>
-        <button class="nav" id="viewMushrooms" onclick="navView()">View Mushrooms</button>
+        <button class="nav" id="bottomViewMushrooms" onclick="navView()">View Mushrooms</button>
         <button class="nav" id="createMushroom" onclick="navCreate()">Add Mushroom</button>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"

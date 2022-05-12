@@ -10,11 +10,13 @@
 </head>
 
 <body>
+    <br>
     <h1>Add Ye Mushrooms Hither</h1>
     <header>
         <button class="nav" id="viewMushrooms" onclick="navView()">View Mushrooms</button>
         <button class="nav" id="createMushroom" onclick="navCreate()">Add Mushroom</button>
     </header>
+    <br>
     <div class="mushroom-form-container">
         <!-- form for creating mushrooms -->
         <form id="mushroom-form" action="submit">
@@ -62,6 +64,16 @@
 
             <input type="submit" id="submit-mushroom-button" value="Submit Mushroom">
         </form>
+        <container id="ellipsis" style="visibility: hidden">
+            <br>
+            <h3>Submitting Mushroom</h3>
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </container>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"

@@ -17,6 +17,12 @@ const navView = () => {
 
     const spinner = document.getElementById('spinner')
     const tables = document.getElementById('mushroom-table')
+    const topNavPage = document.getElementById('topViewMushrooms')
+    const bottomNavPage = document.getElementById('bottomViewMushrooms')
+
+//indents current page bottom
+topNavPage.style.backgroundColor = '#464343';
+bottomNavPage.style.backgroundColor = '#464343';
 
     const spin = () => {
         tables === null ?
@@ -82,6 +88,7 @@ const createMushroomCard = (mushroom) => {
     mushroomContainer.appendChild(mushroomCard) //adds mushroom card to mushroom table in viewMushrooms.html
     spin() //removes loading star when elements received and load from database
     header.style.visibility = 'visible' //adds top nav bar after loading star disappears
+    document.getElementById('hide').style.visibility = 'hidden';
 }
 
 

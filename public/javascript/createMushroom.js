@@ -13,6 +13,10 @@ const navView = () => {
     window.location.href='../views/viewMushrooms.html'
 }
 
+//indents current page bottom
+const navPage = document.getElementById('createMushroom')
+navPage.style.backgroundColor = '#464343';
+
 //clears placeholder for textbox
 const clearTxt = () => {
     const textField = document.getElementById('notes')
@@ -46,6 +50,7 @@ class Mushroom {
 //inserts values into an object and adds to sequelize database
 const captureForm = (e) => {
     e.preventDefault()
+    document.getElementById('ellipsis').style.visibility = 'visible';
 
     let photo = document.getElementById('photo').value
     let name = document.getElementById('name').value
@@ -58,13 +63,20 @@ const captureForm = (e) => {
     let spore_print = document.getElementById('spore_print').value
     let edible = document.getElementById('edible').checked
     let psychoactive = document.getElementById('psychoactive').checked
-    let notes = document.getElementById('notes').value
+    let notes = null
+
+    //to ignore placeholder text
+    document.getElementById('notes').value === 'Enter text here...' ?
+    notes = '' :
+    notes = document.getElementById('notes').value
 
     altitude === "" ? altitude = null : false //changes from "" to null so sequelize still works
     
     let newMushroom = new Mushroom(photo, name, location, date, who, altitude, habitat, substrate, spore_print, edible, psychoactive, notes)
 
     axios.post(axiosRequest, newMushroom).then(() => {
+        document.getElementById('ellipsis').style.visibility = 'hidden';
+        alert('Mushroom successfully submitted!')
         window.location.replace(`http://localhost:5555/views/viewMushrooms.html`)
     }).catch(errCallback)
 }

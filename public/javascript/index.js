@@ -26,7 +26,7 @@ const validateUser = (e) => {
     const loginFunc = () => {
         document.getElementById('ellipsis').style.visibility = 'hidden';
         navView();
-        alert(`Welcome: ${login.username}!`);
+        alert(`Welcome, ${login.username}!`);
     }
 
     axios.post(axiosRequest, login)
@@ -39,12 +39,12 @@ const validateUser = (e) => {
             }else{
                 i = 15; //database sending a lengh of 14 when it should be 1 for some reason and i don't have time to debug properly
                 document.getElementById('ellipsis').style.visibility = 'hidden';
-                alert('wrong username or password')
+                alert('Wrong username or password.')
             }
     }})
     .catch(()=>{
         document.getElementById('ellipsis').style.visibility = 'hidden';
-        alert('user not found, try username and password again');
+        alert('User not found, try username and password again.');
     })
 }
 

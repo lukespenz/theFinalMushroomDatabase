@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    font-family: Papyrus;
+    font-family: 'Papyrus';
     font-size: 40pt;
 }
 
@@ -19,6 +19,21 @@ h1 {
 img {
     width: 300px;
     height: 300px;
+}
+
+#login-icon {
+    width: 100px;
+    height: 100px;
+}
+
+h2 {
+    font-family: 'Papyrus';
+    font-size: 30pt;
+}
+
+h3 {
+    font-family: 'Lucida Console';
+    font-size: 16pt;
 }
 
 /* adds psychedelic filter for psychedelic mushrooms */
@@ -73,7 +88,7 @@ textarea:focus {
     text-decoration: none;
     font-family: 'Lucida Console';
     font-weight: 300;
-    color: rgb(85, 21, 85);
+    color: rgb(0, 0, 0);
     text-align: center;
     transition: all 0.2s;
     cursor: pointer;
@@ -193,15 +208,14 @@ button:hover {
     text-decoration: none;
     font-family: 'Lucida Console';
     font-weight: 300;
-    color: rgb(230, 233, 236);
+    color: rgb(0, 0, 0);
     text-align: center;
     transition: all 0.2s;
     cursor: pointer;
 }
 
 #submit-mushroom-button:hover {
-    background-color: #60c048;
-    color: #464343;
+    background-color: #1b510d;
     cursor: pointer;
 }
 

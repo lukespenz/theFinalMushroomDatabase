@@ -47,6 +47,7 @@ module.exports = {
     getMushroom: (req, res) => {
         sequelize.query(`
         SELECT * FROM mushrooms
+        ORDER BY mushroom_id DESC;
         `)
         .then((dbRes) => {
         res.status(200).send(dbRes[0])
