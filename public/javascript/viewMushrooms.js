@@ -1,10 +1,10 @@
 //input variables
 const mushroomContainer = document.querySelector('#mushroom-container') //element where mushroom cards will be placed
-const axiosRequest = `http://localhost:5555/api/public/views/viewMushrooms` //axios get & delete requests link
+const axiosRequest = `/api/public/views/viewMushrooms` //axios get & delete requests link
 
 //axios delete request: deletes mushroom card
 const errCallback = err => console.log(err)
-const deleteMushroom = (id) => axios.delete(`${axiosRequest}/${id}`).then(window.location.replace(`http://localhost:5555/views/viewMushrooms.html`)).catch(errCallback)
+const deleteMushroom = (id) => axios.delete(`${axiosRequest}/${id}`).then(window.location.replace(`/views/viewMushrooms.html`)).catch(errCallback)
 
 //nav bar buttons & spinning icon
 const navCreate = () => {

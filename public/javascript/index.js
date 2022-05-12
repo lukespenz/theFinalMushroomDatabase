@@ -1,5 +1,5 @@
 //input variables
-const axiosRequest = 'http://localhost:5555/login'
+const axiosRequest = '/login'
 const username = document.getElementById('username')
 const password = document.getElementById('password')
 const login = document.getElementById('login')

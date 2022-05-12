@@ -26,7 +26,7 @@ const clearTxt = () => {
 }
 
 //axios requests
-const axiosRequest = `http://localhost:5555/api/public/views/viewMushrooms`
+const axiosRequest = `/api/public/views/viewMushrooms`
 const errCallback = err => console.log(err)
 
 //creates mushroom objects
@@ -77,7 +77,7 @@ const captureForm = (e) => {
     axios.post(axiosRequest, newMushroom).then(() => {
         document.getElementById('ellipsis').style.visibility = 'hidden';
         alert('Mushroom successfully submitted!')
-        window.location.replace(`http://localhost:5555/views/viewMushrooms.html`)
+        window.location.replace(`/views/viewMushrooms.html`)
     }).catch(errCallback)
 }
 
