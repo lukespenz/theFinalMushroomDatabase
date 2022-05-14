@@ -26,6 +26,10 @@ img {
     height: 100px;
 }
 
+#login-text {
+    font-size: 20pt;
+}
+
 h2 {
     font-family: 'Papyrus';
     font-size: 30pt;
@@ -34,6 +38,11 @@ h2 {
 h3 {
     font-family: 'Lucida Console';
     font-size: 16pt;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* adds psychedelic filter for psychedelic mushrooms */

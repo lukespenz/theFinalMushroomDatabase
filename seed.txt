@@ -58,7 +58,8 @@ true,
 'none',
 true,
 false,
-'rare find, cooked em up and they tasted like teriyaki chicken.'
+'rare find, cooked em up and  
+they tasted like teriyaki chicken.'
 ),
 
 ('https://imgs.search.brave.com/WmIbJRYKcOQ3d4jnYdRjf8hJs-hxZt6E7ZIEDN6b17c/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9qb29p/bm4uY29tL2ltYWdl/cy9saXR0bGUtbXVz/aHJvb21zLTEuanBn',
@@ -86,7 +87,9 @@ false,
 'n/a',
 true,
 false,
-'A colorized photo of the first mushroom George Washington offered the king of Canada as a peace offering. The two countries have been at peace ever since.'
+'A colorized photo of the first mushroom George  
+Washington offered the king of Canada as a peace  
+offering. The two countries have been at peace ever since.'
 ),
 
 ('https://i.kym-cdn.com/photos/images/original/001/499/354/ebd.jpg',
@@ -100,7 +103,8 @@ false,
 'white donut powder',
 false,
 false,
-'This mushroom was brought to you by, Monster Energy: Unleash the Kyle'
+'This mushroom was brought to you by  
+Monster Energy: Unleash the Kyle'
 ),
 
 ('https://imgs.search.brave.com/Don2O6HK-PgHHNahXkafqniw2Z8Ay_i8QoSoY0SnM_c/rs:fit:1024:768:1/g:ce/aHR0cHM6Ly93d3cu/bWFyaWp1YW5hZG9j/dG9ycy5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjAvMDcv/UHNpbG9jeWJuLW11/c2hyb29tcy0xMDI0/eDc2OC5qcGc',
@@ -114,7 +118,8 @@ false,
 'none',
 true,
 true,
-'these mushrooms showed me the face of God. 7/10'
+'these mushrooms showed me  
+ the face of God. 7/10'
 ),
 
 ('https://imgs.search.brave.com/pZESp20kyuSS6AhaA0JxW8Zd5HL8dIAKN__KjwQQl08/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5E/MjBJcWpOQjFCaGVn/MTFtTU5uMGFBSGFI/YSZwaWQ9QXBp',

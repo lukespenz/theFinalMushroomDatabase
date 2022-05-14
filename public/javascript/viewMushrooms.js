@@ -20,6 +20,22 @@ const navView = () => {
     const topNavPage = document.getElementById('topViewMushrooms')
     const bottomNavPage = document.getElementById('bottomViewMushrooms')
 
+// breaks to new line after 32 characters
+const noteBreaker = (input) => {
+    const ogLength = input.length
+    const arr = input.split('');
+
+    for(let i = 32; i < ogLength; i++){
+        if(arr[i] == ' '){
+        arr.splice([i], 1, '<br>');
+          i += 32
+        } else {
+        false
+        };
+    }
+      return arr.join('')
+};
+
 //indents current page bottom
 topNavPage.style.backgroundColor = '#464343';
 bottomNavPage.style.backgroundColor = '#464343';
@@ -42,8 +58,11 @@ const displayMushrooms = () => {
 
 //mushroom card html insert
 const createMushroomCard = (mushroom) => {
+    
     const mushroomCard = document.createElement('div')
     mushroomCard.classList.add('mushroom-table')
+    
+    const broken = noteBreaker(mushroom.notes)
 
     mushroom.psychoactive === true ?
     mushroomCard.innerHTML += `
@@ -61,6 +80,17 @@ const createMushroomCard = (mushroom) => {
         <th>Date</th>
         <th>Documentor</th>
         <th>Altitude</th>
+    </tr>
+    <tr>
+        <td>${mushroom.mushroom_name}</td>
+        <td>${mushroom.location}</td>
+        <td>${mushroom.date}</td>
+        <td>${mushroom.who}</td>
+        <td>${mushroom.altitude}</td>
+    </tr>
+    <br>
+    <table border="1px">
+    <tr>
         <th>Habitat</th>
         <th>Substrate</th>
         <th>Spore Print</th>
@@ -69,19 +99,15 @@ const createMushroomCard = (mushroom) => {
         <th>Notes</th>
     </tr>
     <tr>
-        <td>${mushroom.mushroom_name}</td>
-        <td>${mushroom.location}</td>
-        <td>${mushroom.date}</td>
-        <td>${mushroom.who}</td>
-        <td>${mushroom.altitude}</td>
         <td>${mushroom.habitat}</td>
         <td>${mushroom.substrate}</td>
         <td>${mushroom.spore_print}</td>
         <td>${mushroom.edible}</td>
         <td>${mushroom.psychoactive}</td>
-        <td>${mushroom.notes}</td>
-        </tr>
-        </table>
+        <td>${broken}</td>
+    </tr>
+    </table>
+
         <button id="delete-button" onclick="deleteMushroom(${mushroom.mushroom_id})">Delete</button>
         `
         
